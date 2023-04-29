@@ -24,8 +24,10 @@ Vuetify：3.0.0
 こんな感じに表示されます。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2485934/d4af4845-0b89-bb00-20c4-dd9c7b28f7dc.png)
 
+<br/>
 次にVuetifyインスタンスを取得する関数を追加します。
 scriptタグに以下のソースコードを追加します。
+
 ```App.vue
 <script lang="ts" setup>
 import { computed,getCurrentInstance } from 'vue';
@@ -40,11 +42,14 @@ const usevuetify = () => {
 </script>
 ```
 
+<br/>
 次に、画面サイズに応じてCardの高さを返すcomputedプロパティを定義します。
 この中では、Vuetifyインスタンスのdisplayプロパティを使用します。
 displayプロパティの中に、画面幅のブレイクポイントのプロパティが含まれています（xsやmdなど）。
+
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2485934/bb3726e3-370c-1ffd-3073-a10a13ea7538.png)
 
+<br/>
 各ブレイクポイントのプロパティはboolean値です。
 画面が各ブレイクポイントで指定されている幅未満だった場合trueとなります。
 例えば、xsプロパティは画面が600px未満（スマホサイズ）の時にtrueとなります。
@@ -78,7 +83,9 @@ const getCardHeight = computed(function()  {
 </script>
 ```
 
+<br/>
 templateタグのCardコンポーネントのheightプロパティに、↑で定義したgetCardHeightを指定します。
+
 ```App.vue
 <template>
   <v-app>
@@ -94,7 +101,9 @@ templateタグのCardコンポーネントのheightプロパティに、↑で�
 </template>
 ```
 
+<br/>
 最終的にソースコードは以下のようになります。
+
 ```App.vue
 <script lang="ts" setup>
 import { computed,getCurrentInstance } from 'vue';
