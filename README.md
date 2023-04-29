@@ -19,7 +19,7 @@ Vuetify：3.0.0
   </v-app>
 </template>
 ```
-
+<br/>
 こんな感じに表示されます。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2485934/d4af4845-0b89-bb00-20c4-dd9c7b28f7dc.png)
 
